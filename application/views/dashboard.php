@@ -69,7 +69,7 @@
 					<div class="content">
 						
 						<div class="verticalChart" style="width: 500px">
-							<?php foreach ($kelas as $key); ?>
+							<?php foreach ($kelas as $key): ?>
 								
 								<div class="singleBar">
 							
