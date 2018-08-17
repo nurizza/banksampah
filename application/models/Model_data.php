@@ -17,10 +17,11 @@ class Model_data extends CI_Model {
         return $query->result_array();
     }
 
-    public function select_chart($table)
+    public function select_chart($table,$where)
     {
         $query = $this->db->select('SUM(berat_sampah) as berat_sampah, SUM(poin) as poin, penyetor')
                         ->from($table)
+                        ->where($where)
                         ->group_by('penyetor')
                         ->get();
         return $query->result_array();
